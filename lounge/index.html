@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Chillax Lounge | Kigali's Premier Nightlife & Dining</title>
+    <meta name="title" content="Chillax Lounge | Kigali's Premier Nightlife & Dining">
+    <meta name="description" content="Elevate your evening at Chillax Lounge. Kigali's premier hybrid space offering upscale dining, signature cocktails, and a high-energy nightclub experience in Nyarutarama.">
+    <meta name="keywords" content="Chillax Lounge, Kigali nightlife, Nyarutarama, restaurant Kigali, lounge Kigali, club Rwanda, fine dining Rwanda">
+    <meta name="author" content="Chillax Lounge">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chillaxkigali.com/">
+    <meta property="og:title" content="Chillax Lounge | Kigali's Premier Nightlife & Dining">
+    <meta property="og:description" content="From cozy twilight conversations to an energetic nightclub experience in the heart of Nyarutarama. Book your table today.">
+    <meta property="og:image" content="5.jpg">
+
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <style>
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+        }
+        .star-filled path {
+            fill: currentColor;
+        }
+        /* Hide scrollbar for cleaner UI on webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d97706; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b; 
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-neutral-950 text-neutral-200 font-sans selection:bg-amber-500 selection:text-white">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-6" aria-label="Main Navigation">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-[0.2em] text-white flex items-center gap-2 cursor-pointer" onclick="scrollToSection('home')" aria-label="Go to Home">
+                <span class="text-amber-500">C</span>HILLAX
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest text-neutral-300">
+                <button onclick="scrollToSection('about')" class="hover:text-amber-400 transition-colors">ABOUT</button>
+                <button onclick="scrollToSection('vibe')" class="hover:text-amber-400 transition-colors">VIBE</button>
+                <button onclick="scrollToSection('menu')" class="hover:text-amber-400 transition-colors">MENU</button>
+                <button onclick="scrollToSection('gallery')" class="hover:text-amber-400 transition-colors">GALLERY</button>
+                <button onclick="scrollToSection('contact')" class="border border-amber-500 text-amber-500 px-6 py-2 hover:bg-amber-500 hover:text-white transition-all">
+                    RESERVE
+                </button>
+            </div>
+
+            <button class="md:hidden text-white" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i id="menu-icon" data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-neutral-950 z-40 flex-col items-center justify-center space-y-8 text-xl tracking-widest" aria-hidden="true">
+        <button onclick="scrollToSection('about')" class="text-white hover:text-amber-400">ABOUT</button>
+        <button onclick="scrollToSection('vibe')" class="text-white hover:text-amber-400">VIBE</button>
+        <button onclick="scrollToSection('menu')" class="text-white hover:text-amber-400">MENU</button>
+        <button onclick="scrollToSection('gallery')" class="text-white hover:text-amber-400">GALLERY</button>
+        <button onclick="scrollToSection('contact')" class="text-amber-500 mt-4">RESERVE A TABLE</button>
+    </div>
+
+    <main>
+        <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-neutral-900">
+                <video 
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline
+                    poster="hero-fallback.jpg" 
+                    class="w-full h-full object-cover"
+                >
+                    <source src="gemini_generated_video_7999bc07.mp4" type="video/mp4" />
+                </video>
+                <div class="absolute inset-0 bg-black/60"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent"></div>
+            </div>
+            
+            <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
+                <div class="flex justify-center items-center gap-2 mb-6 text-amber-500">
+                    <i data-lucide="star" class="w-4 h-4 star-filled"></i>
+                    <i data-lucide="star" class="w-4 h-4 star-filled"></i>
+                    <i data-lucide="star" class="w-4 h-4 star-filled"></i>
+                    <i data-lucide="star" class="w-4 h-4 star-filled"></i>
+                    <i data-lucide="star" class="w-4 h-4 star-filled opacity-50"></i>
+                    <span class="text-xs tracking-widest text-neutral-300 ml-2">4.2 STAR RATED</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight uppercase">
+                    Elevate Your <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-600">Evening</span>
+                </h1>
+                <p class="text-lg md:text-xl text-neutral-300 mb-10 font-light max-w-2xl mx-auto">
+                    Kigali's premier hybrid space. From cozy twilight conversations to an energetic nightclub experience in the heart of Nyarutarama.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="scrollToSection('contact')" class="bg-amber-600 text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-amber-500 transition-colors flex items-center justify-center gap-2">
+                        BOOK A TABLE <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="scrollToSection('menu')" class="border border-white/20 text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-white/10 transition-colors">
+                        VIEW MENU
+                    </button>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div class="w-[1px] h-16 bg-gradient-to-b from-amber-500 to-transparent"></div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em]">THE CHILLAX EXPERIENCE</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                        Casual. Upscale. <br/>Unforgettable.
+                    </h3>
+                    <p class="text-neutral-400 leading-relaxed text-lg font-light">
+                        Located in the vibrant Nyarutarama district, Chillax Lounge is celebrated for its stunning modern architecture and breathtaking views of Kigali. 
+                    </p>
+                    <p class="text-neutral-400 leading-relaxed text-lg font-light">
+                        We seamlessly transition from a relaxed, romantic dining atmosphere in the early evening to a high-energy nightclub as the night unfolds. Whether you're here for our signature cocktails, diverse menu, or the pulsing Afrobeats, the vibe is always impeccable.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-6 border-t border-neutral-800">
+                        <div>
+                            <h4 class="text-white font-bold mb-2">Amenities</h4>
+                            <ul class="text-sm text-neutral-400 space-y-2">
+                                <li>Indoor & Outdoor Seating</li>
+                                <li>Free Private Parking</li>
+                                <li>Wheelchair Accessible</li>
+                                <li>Card & NFC Payments</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-2">Services</h4>
+                            <ul class="text-sm text-neutral-400 space-y-2">
+                                <li>Dine-in & Reservations</li>
+                                <li>Takeout & Delivery</li>
+                                <li>Live Music & DJ Sets</li>
+                                <li>Karaoke Thursdays</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="5.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80'" alt="Illuminated grand staircase at Chillax Lounge" class="w-4/5 h-[600px] object-cover rounded-sm shadow-2xl z-10 relative" />
+                    <img src="9.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=800&q=80'" alt="Terrace views overlooking Kigali" class="w-3/5 h-[400px] object-cover rounded-sm absolute -bottom-10 -right-4 border-8 border-neutral-950 z-20 shadow-2xl" />
+                </div>
+            </div>
+        </section>
+
+        <section id="vibe" class="py-24 bg-neutral-900 border-y border-neutral-800">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 text-center mb-16">
+                <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] mb-4">ENTERTAINMENT</h2>
+                <h3 class="text-4xl font-bold text-white">Feel The Rhythm of Kigali</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6 md:px-12">
+                <div class="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5]">
+                    <img src="8.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1470337458703-415120a41767?auto=format&fit=crop&w=800&q=80'" alt="Cocktails at the Lounge Bar" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent flex flex-col justify-end p-8">
+                        <i data-lucide="glass-water" class="text-amber-500 mb-4 w-8 h-8"></i>
+                        <h4 class="text-2xl font-bold text-white mb-2">Mixology</h4>
+                        <p class="text-sm text-neutral-300 font-light">A full bar serving signature cocktails, curated wines, local beers, and premium spirits.</p>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5]">
+                    <img src="2.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=800&q=80'" alt="Live DJ Outdoor gathering" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent flex flex-col justify-end p-8">
+                        <i data-lucide="music" class="text-amber-500 mb-4 w-8 h-8"></i>
+                        <h4 class="text-2xl font-bold text-white mb-2">Live Sets</h4>
+                        <p class="text-sm text-neutral-300 font-light">DJ sets mixing global hits with Afrobeats, keeping the dedicated dance floor full on weekends.</p>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5]">
+                    <img src="1.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80'" alt="Karaoke & Club Night" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent flex flex-col justify-end p-8">
+                        <i data-lucide="calendar" class="text-amber-500 mb-4 w-8 h-8"></i>
+                        <h4 class="text-2xl font-bold text-white mb-2">Weekly Events</h4>
+                        <p class="text-sm text-neutral-300 font-light">Join us for Karaoke Thursdays and themed nights. The perfect blend of romantic and lively.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="py-24 relative">
+            <div class="absolute inset-0 opacity-10">
+                <img src="7.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80'" alt="Fine Dining Background" class="w-full h-full object-cover grayscale" />
+                <div class="absolute inset-0 bg-neutral-950/90"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <i data-lucide="utensils" class="mx-auto text-amber-500 mb-4 w-10 h-10" stroke-width="1"></i>
+                    <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] mb-4">CULINARY EXCELLENCE</h2>
+                    <h3 class="text-4xl font-bold text-white">Menu Highlights</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div>
+                        <h4 class="text-2xl font-serif text-white border-b border-neutral-800 pb-4 mb-8">Starters & Bites</h4>
+                        <div class="space-y-8">
+                            <div class="flex justify-between items-baseline">
+                                <div>
+                                    <h5 class="text-lg font-bold text-neutral-200">Beef Samosas</h5>
+                                    <p class="text-sm text-neutral-500 font-light mt-1">Crispy pastry filled with savory spiced beef</p>
+                                </div>
+                                <div class="text-amber-500 font-medium">12,000 RWF</div>
+                            </div>
+                            <div class="flex justify-between items-baseline">
+                                <div>
+                                    <h5 class="text-lg font-bold text-neutral-200">Fish Fingers</h5>
+                                    <p class="text-sm text-neutral-500 font-light mt-1">Golden fried fish with tartar sauce</p>
+                                </div>
+                                <div class="text-amber-500 font-medium">15,000 RWF</div>
+                            </div>
+                            <div class="flex justify-between items-baseline">
+                                <div>
+                                    <h5 class="text-lg font-bold text-neutral-200">Calamari Tempura</h5>
+                                    <p class="text-sm text-neutral-500 font-light mt-1">Lightly battered squid rings with sweet chili</p>
+                                </div>
+                                <div class="text-amber-500 font-medium">15,000 RWF</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-2xl font-serif text-white border-b border-neutral-800 pb-4 mb-8">Main Courses</h4>
+                        <div class="space-y-8">
+                            <div class="flex justify-between items-baseline">
+                                <div>
+                                    <h5 class="text-lg font-bold text-neutral-200">Grilled Beef Fillet</h5>
+                                    <p class="text-sm text-neutral-500 font-light mt-1">Premium cut, cooked to your preference</p>
+                                </div>
+                                <div class="text-amber-500 font-medium">25,000 RWF</div>
+                            </div>
+                            <div class="flex justify-between items-baseline">
+                                <div>
+                                    <h5 class="text-lg font-bold text-neutral-200">Whole Grilled Fish</h5>
+                                    <p class="text-sm text-neutral-500 font-light mt-1">Fresh local catch with traditional spices</p>
+                                </div>
+                                <div class="text-amber-500 font-medium">30,000 RWF</div>
+                            </div>
+                            <div class="flex justify-between items-baseline">
+                                <div>
+                                    <h5 class="text-lg font-bold text-neutral-200">Gourmet Selection</h5>
+                                    <p class="text-sm text-neutral-500 font-light mt-1">Variety of handcrafted Pizzas, Wraps & Burgers</p>
+                                </div>
+                                <div class="text-amber-500 font-medium text-sm">Varies</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-16">
+                    <button class="text-sm tracking-widest text-amber-500 hover:text-white transition-colors border-b border-amber-500 pb-1" aria-label="Download Full Menu PDF">
+                        DOWNLOAD FULL MENU PDF
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-2">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                <img src="4.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80'" alt="Sunset View from Lounge" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
+                <img src="7.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80'" alt="Dining Terrace Area" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
+                <img src="10.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80'" alt="Corporate Gathering at Chillax" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
+                <img src="3.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=600&q=80'" alt="Daytime Garden Seating" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-neutral-900 border-t border-neutral-800">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] mb-4">GET IN TOUCH</h2>
+                    <h3 class="text-4xl font-bold text-white">Visit Chillax Lounge</h3>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div class="bg-neutral-950 p-8 rounded-sm border border-neutral-800 shadow-xl relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
+                            <div class="flex items-center gap-3 mb-8 border-b border-neutral-800 pb-4">
+                                <i data-lucide="clock" class="text-amber-500 w-7 h-7"></i>
+                                <h4 class="text-2xl font-serif text-white">Operating Hours</h4>
+                            </div>
+                            <ul class="space-y-5 text-neutral-300">
+                                <li class="flex justify-between items-center">
+                                    <span class="font-bold tracking-wider text-white">Monday</span>
+                                    <span class="bg-red-950/50 text-red-400 border border-red-900/50 px-3 py-1 text-xs font-bold tracking-widest uppercase rounded-sm">Closed</span>
+                                </li>
+                                <li class="flex justify-between items-center border-t border-neutral-800/50 pt-5">
+                                    <span class="font-bold tracking-wider text-white">Tuesday - Friday</span>
+                                    <span class="text-amber-500 font-light">5:00 PM - 1:00 AM</span>
+                                </li>
+                                <li class="flex justify-between items-center border-t border-neutral-800/50 pt-5">
+                                    <span class="font-bold tracking-wider text-white">Saturday - Sunday</span>
+                                    <span class="text-amber-500 font-light">5:00 PM - 2:00 AM</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-neutral-950 p-6 rounded-sm border border-neutral-800 flex flex-col justify-center items-center text-center group hover:border-amber-500/50 transition-colors">
+                                <i data-lucide="phone" class="text-amber-500 mb-3 group-hover:scale-110 transition-transform w-6 h-6"></i>
+                                <h5 class="text-white font-bold mb-1">Phone</h5>
+                                <p class="text-neutral-400 text-sm font-light">+250 738 858 888</p>
+                            </div>
+                            <div class="bg-neutral-950 p-6 rounded-sm border border-neutral-800 flex flex-col justify-center items-center text-center group hover:border-amber-500/50 transition-colors">
+                                <i data-lucide="mail" class="text-amber-500 mb-3 group-hover:scale-110 transition-transform w-6 h-6"></i>
+                                <h5 class="text-white font-bold mb-1">Email</h5>
+                                <p class="text-neutral-400 text-sm font-light">info@chillaxkigali.com</p>
+                            </div>
+                            <div class="sm:col-span-2 bg-neutral-950 p-6 rounded-sm border border-neutral-800 flex flex-col justify-center items-center text-center group hover:border-amber-500/50 transition-colors">
+                                <i data-lucide="map-pin" class="text-amber-500 mb-3 group-hover:scale-110 transition-transform w-6 h-6"></i>
+                                <h5 class="text-white font-bold mb-1">Location</h5>
+                                <p class="text-neutral-400 text-sm font-light">KG 13 Ave, Nyarutarama, Kigali, Rwanda</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8 flex flex-col">
+                        <form class="bg-neutral-950 p-8 rounded-sm border border-neutral-800 flex-grow shadow-xl">
+                            <h4 class="text-2xl font-serif text-white mb-6">Send a Message</h4>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <input type="text" aria-label="Your Name" placeholder="Your Name" class="bg-neutral-900 border border-neutral-800 text-white px-4 py-3 focus:outline-none focus:border-amber-500 w-full font-light" required />
+                                    <input type="email" aria-label="Email Address" placeholder="Email Address" class="bg-neutral-900 border border-neutral-800 text-white px-4 py-3 focus:outline-none focus:border-amber-500 w-full font-light" required />
+                                </div>
+                                <input type="text" aria-label="Subject" placeholder="Subject (e.g. Reservation Inquiry)" class="bg-neutral-900 border border-neutral-800 text-white px-4 py-3 focus:outline-none focus:border-amber-500 w-full font-light" required />
+                                <textarea aria-label="Your Message" placeholder="Your Message" rows="3" class="bg-neutral-900 border border-neutral-800 text-white px-4 py-3 focus:outline-none focus:border-amber-500 w-full resize-none font-light" required></textarea>
+                                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold tracking-widest py-4 transition-colors flex items-center justify-center gap-2 mt-2">
+                                    SEND MESSAGE <i data-lucide="send" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="mt-12 h-[400px] w-full rounded-sm overflow-hidden border border-neutral-800 shadow-2xl relative group">
+                    <div class="absolute inset-0 bg-neutral-950/20 group-hover:bg-transparent transition-colors pointer-events-none z-10"></div>
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Chillax%20Lounge,%20Kigali&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Chillax Lounge Map Location in Nyarutarama"
+                        class="grayscale-[30%] contrast-125 hover:grayscale-0 transition-all duration-700"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-neutral-950 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+            <div class="text-2xl font-bold tracking-[0.2em] text-white cursor-pointer" onclick="scrollToSection('home')">
+                <span class="text-amber-500">C</span>HILLAX
+            </div>
+            <div class="flex gap-4">
+                <a href="#" aria-label="Visit our Instagram" class="w-10 h-10 rounded-full bg-neutral-900 flex items-center justify-center text-neutral-400 hover:bg-amber-500 hover:text-white transition-colors">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                </a>
+                <a href="#" aria-label="Visit our Facebook page" class="w-10 h-10 rounded-full bg-neutral-900 flex items-center justify-center text-neutral-400 hover:bg-amber-500 hover:text-white transition-colors">
+                    <i data-lucide="facebook" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center md:text-left text-xs text-neutral-600 font-light border-t border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>© <span id="current-year"></span> Chillax Lounge Kigali. All Rights Reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-amber-500 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-amber-500 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-neutral-950/90', 'backdrop-blur-md', 'py-4', 'shadow-2xl');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-neutral-950/90', 'backdrop-blur-md', 'py-4', 'shadow-2xl');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        let isMobileMenuOpen = false;
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const navBtn = document.querySelector('button[aria-controls="mobile-menu"]');
+            
+            isMobileMenuOpen = !isMobileMenuOpen;
+            navBtn.setAttribute('aria-expanded', isMobileMenuOpen);
+            
+            if (isMobileMenuOpen) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+                
+                const newIcon = document.createElement('i');
+                newIcon.id = 'menu-icon';
+                newIcon.setAttribute('data-lucide', 'x');
+                newIcon.className = 'w-7 h-7';
+                icon.parentNode.replaceChild(newIcon, icon);
+                lucide.createIcons();
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+                
+                const newIcon = document.createElement('i');
+                newIcon.id = 'menu-icon';
+                newIcon.setAttribute('data-lucide', 'menu');
+                newIcon.className = 'w-7 h-7';
+                icon.parentNode.replaceChild(newIcon, icon);
+                lucide.createIcons();
+            }
+        }
+
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                if (isMobileMenuOpen) {
+                    toggleMobileMenu();
+                }
+            }
+        }
+
+        // Initialize Lucide Icons after the deferred script loads
+        window.addEventListener('load', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
