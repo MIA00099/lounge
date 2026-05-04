@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Primary Meta Tags & SEO -->
     <title>Chillax Lounge | Kigali's Premier Nightlife & Dining</title>
     <meta name="title" content="Chillax Lounge | Kigali's Premier Nightlife & Dining">
     <meta name="description" content="Elevate your evening at Chillax Lounge. Kigali's premier hybrid space offering upscale dining, signature cocktails, and a high-energy nightclub experience in Nyarutarama.">
-    <meta name="keywords" content="Chillax Lounge, Kigali nightlife, Nyarutarama, restaurant Kigali, lounge Kigali, club Rwanda, fine dining Rwanda">
+    <meta name="keywords" content="Chillax Lounge, Kigali nightlife, Nyarutarama, restaurant Kigali, lounge Kigali, club Rwanda, fine dining Rwanda, best bars in Kigali">
     <meta name="author" content="Chillax Lounge">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chillaxkigali.com/">
 
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chillaxkigali.com/">
     <meta property="og:title" content="Chillax Lounge | Kigali's Premier Nightlife & Dining">
     <meta property="og:description" content="From cozy twilight conversations to an energetic nightclub experience in the heart of Nyarutarama. Book your table today.">
-    <meta property="og:image" content="5.jpg">
+    <meta property="og:image" content="https://chillaxkigali.com/5.jpg">
 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chillaxkigali.com/">
+    <meta property="twitter:title" content="Chillax Lounge | Kigali's Premier Nightlife & Dining">
+    <meta property="twitter:description" content="Elevate your evening at Chillax Lounge in Nyarutarama. Book your table today.">
+    <meta property="twitter:image" content="https://chillaxkigali.com/5.jpg">
+
+    <!-- Preconnects to speed up external resource loading -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -32,14 +46,50 @@
         }
     </script>
 
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <!-- Local Business Schema Markup for extreme SEO boost -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NightClub",
+      "name": "Chillax Lounge",
+      "image": "https://chillaxkigali.com/5.jpg",
+      "@id": "https://chillaxkigali.com/",
+      "url": "https://chillaxkigali.com/",
+      "telephone": "+250738858888",
+      "priceRange": "$$$",
+      "menu": "https://chillaxkigali.com/#menu",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "KG 13 Ave",
+        "addressLocality": "Nyarutarama, Kigali",
+        "addressRegion": "Kigali City",
+        "addressCountry": "RW"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.935114,
+        "longitude": 30.060164
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "17:00",
+          "closes": "01:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "17:00",
+          "closes": "02:00"
+        }
+      ]
+    }
+    </script>
 
     <style>
         body {
             font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-        }
-        .star-filled path {
-            fill: currentColor;
         }
         /* Hide scrollbar for cleaner UI on webkit */
         ::-webkit-scrollbar {
@@ -59,37 +109,43 @@
 </head>
 <body class="min-h-screen bg-neutral-950 text-neutral-200 font-sans selection:bg-amber-500 selection:text-white">
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-6" aria-label="Main Navigation">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-[0.2em] text-white flex items-center gap-2 cursor-pointer" onclick="scrollToSection('home')" aria-label="Go to Home">
-                <span class="text-amber-500">C</span>HILLAX
-            </div>
-            
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest text-neutral-300">
-                <button onclick="scrollToSection('about')" class="hover:text-amber-400 transition-colors">ABOUT</button>
-                <button onclick="scrollToSection('vibe')" class="hover:text-amber-400 transition-colors">VIBE</button>
-                <button onclick="scrollToSection('menu')" class="hover:text-amber-400 transition-colors">MENU</button>
-                <button onclick="scrollToSection('gallery')" class="hover:text-amber-400 transition-colors">GALLERY</button>
-                <button onclick="scrollToSection('contact')" class="border border-amber-500 text-amber-500 px-6 py-2 hover:bg-amber-500 hover:text-white transition-all">
-                    RESERVE
+    <header>
+        <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent py-6" aria-label="Main Navigation">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+                <div class="text-2xl font-bold tracking-[0.2em] text-white flex items-center gap-2 cursor-pointer" onclick="scrollToSection('home')" aria-label="Go to Home">
+                    <span class="text-amber-500">C</span>HILLAX
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest text-neutral-300">
+                    <button onclick="scrollToSection('about')" class="hover:text-amber-400 transition-colors">ABOUT</button>
+                    <button onclick="scrollToSection('vibe')" class="hover:text-amber-400 transition-colors">VIBE</button>
+                    <button onclick="scrollToSection('menu')" class="hover:text-amber-400 transition-colors">MENU</button>
+                    <button onclick="scrollToSection('gallery')" class="hover:text-amber-400 transition-colors">GALLERY</button>
+                    <button onclick="scrollToSection('contact')" class="border border-amber-500 text-amber-500 px-6 py-2 hover:bg-amber-500 hover:text-white transition-all">
+                        RESERVE
+                    </button>
+                </div>
+
+                <button class="md:hidden text-white" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span id="menu-icon-container">
+                        <!-- Inline SVG Menu Icon (Instant Load) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    </span>
                 </button>
             </div>
+        </nav>
 
-            <button class="md:hidden text-white" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-menu">
-                <i id="menu-icon" data-lucide="menu" class="w-7 h-7"></i>
-            </button>
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-neutral-950 z-40 flex-col items-center justify-center space-y-8 text-xl tracking-widest" aria-hidden="true">
+            <button onclick="scrollToSection('about')" class="text-white hover:text-amber-400 transition-colors">ABOUT</button>
+            <button onclick="scrollToSection('vibe')" class="text-white hover:text-amber-400 transition-colors">VIBE</button>
+            <button onclick="scrollToSection('menu')" class="text-white hover:text-amber-400 transition-colors">MENU</button>
+            <button onclick="scrollToSection('gallery')" class="text-white hover:text-amber-400 transition-colors">GALLERY</button>
+            <button onclick="scrollToSection('contact')" class="text-amber-500 mt-4 transition-colors">RESERVE A TABLE</button>
         </div>
-    </nav>
-
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-neutral-950 z-40 flex-col items-center justify-center space-y-8 text-xl tracking-widest" aria-hidden="true">
-        <button onclick="scrollToSection('about')" class="text-white hover:text-amber-400">ABOUT</button>
-        <button onclick="scrollToSection('vibe')" class="text-white hover:text-amber-400">VIBE</button>
-        <button onclick="scrollToSection('menu')" class="text-white hover:text-amber-400">MENU</button>
-        <button onclick="scrollToSection('gallery')" class="text-white hover:text-amber-400">GALLERY</button>
-        <button onclick="scrollToSection('contact')" class="text-amber-500 mt-4">RESERVE A TABLE</button>
-    </div>
+    </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 bg-neutral-900">
                 <video 
@@ -97,7 +153,9 @@
                     loop 
                     muted 
                     playsinline
+                    preload="auto"
                     poster="hero-fallback.jpg" 
+                    fetchpriority="high"
                     class="w-full h-full object-cover"
                 >
                     <source src="gemini_generated_video_7999bc07.mp4" type="video/mp4" />
@@ -107,13 +165,14 @@
             </div>
             
             <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
-                <div class="flex justify-center items-center gap-2 mb-6 text-amber-500">
-                    <i data-lucide="star" class="w-4 h-4 star-filled"></i>
-                    <i data-lucide="star" class="w-4 h-4 star-filled"></i>
-                    <i data-lucide="star" class="w-4 h-4 star-filled"></i>
-                    <i data-lucide="star" class="w-4 h-4 star-filled"></i>
-                    <i data-lucide="star" class="w-4 h-4 star-filled opacity-50"></i>
-                    <span class="text-xs tracking-widest text-neutral-300 ml-2">4.2 STAR RATED</span>
+                <div class="flex justify-center items-center gap-1 mb-6 text-amber-500">
+                    <!-- Inline SVG Stars -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 opacity-50"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <span class="text-xs tracking-widest text-neutral-300 ml-2 font-medium">4.2 STAR RATED</span>
                 </div>
                 <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight uppercase">
                     Elevate Your <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-600">Evening</span>
@@ -123,7 +182,8 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button onclick="scrollToSection('contact')" class="bg-amber-600 text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-amber-500 transition-colors flex items-center justify-center gap-2">
-                        BOOK A TABLE <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        BOOK A TABLE 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                     </button>
                     <button onclick="scrollToSection('menu')" class="border border-white/20 text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-white/10 transition-colors">
                         VIEW MENU
@@ -136,10 +196,11 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
-                    <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em]">THE CHILLAX EXPERIENCE</h2>
+                    <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] uppercase">The Chillax Experience</h2>
                     <h3 class="text-4xl md:text-5xl font-bold text-white leading-tight">
                         Casual. Upscale. <br/>Unforgettable.
                     </h3>
@@ -173,58 +234,65 @@
                 </div>
                 
                 <div class="relative">
-                    <img src="5.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80'" alt="Illuminated grand staircase at Chillax Lounge" class="w-4/5 h-[600px] object-cover rounded-sm shadow-2xl z-10 relative" />
-                    <img src="9.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=800&q=80'" alt="Terrace views overlooking Kigali" class="w-3/5 h-[400px] object-cover rounded-sm absolute -bottom-10 -right-4 border-8 border-neutral-950 z-20 shadow-2xl" />
+                    <!-- Added explicit width/height to avoid Layout Shifts -->
+                    <img src="5.jpg" width="800" height="600" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80'" alt="Illuminated grand staircase at Chillax Lounge" class="w-4/5 h-[600px] object-cover rounded-sm shadow-2xl z-10 relative" />
+                    <img src="9.jpg" width="800" height="400" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=800&q=80'" alt="Terrace views overlooking Kigali" class="w-3/5 h-[400px] object-cover rounded-sm absolute -bottom-10 -right-4 border-8 border-neutral-950 z-20 shadow-2xl" />
                 </div>
             </div>
         </section>
 
+        <!-- Entertainment / Vibe Section -->
         <section id="vibe" class="py-24 bg-neutral-900 border-y border-neutral-800">
             <div class="max-w-7xl mx-auto px-6 md:px-12 text-center mb-16">
-                <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] mb-4">ENTERTAINMENT</h2>
+                <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] mb-4 uppercase">Entertainment</h2>
                 <h3 class="text-4xl font-bold text-white">Feel The Rhythm of Kigali</h3>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-6 md:px-12">
-                <div class="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5]">
-                    <img src="8.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1470337458703-415120a41767?auto=format&fit=crop&w=800&q=80'" alt="Cocktails at the Lounge Bar" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
+                <article class="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5]">
+                    <img src="8.jpg" width="800" height="1000" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1470337458703-415120a41767?auto=format&fit=crop&w=800&q=80'" alt="Cocktails at the Lounge Bar" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
                     <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent flex flex-col justify-end p-8">
-                        <i data-lucide="glass-water" class="text-amber-500 mb-4 w-8 h-8"></i>
+                        <!-- Inline SVG Glass Water -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500 mb-4"><path d="M15.2 22H8.8a2 2 0 0 1-2-1.79L5 3h14l-1.81 17.21A2 2 0 0 1 15.2 22Z"/><path d="M6 12h12"/></svg>
                         <h4 class="text-2xl font-bold text-white mb-2">Mixology</h4>
                         <p class="text-sm text-neutral-300 font-light">A full bar serving signature cocktails, curated wines, local beers, and premium spirits.</p>
                     </div>
-                </div>
+                </article>
                 
-                <div class="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5]">
-                    <img src="2.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=800&q=80'" alt="Live DJ Outdoor gathering" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
+                <article class="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5]">
+                    <img src="2.jpg" width="800" height="1000" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=800&q=80'" alt="Live DJ Outdoor gathering" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
                     <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent flex flex-col justify-end p-8">
-                        <i data-lucide="music" class="text-amber-500 mb-4 w-8 h-8"></i>
+                        <!-- Inline SVG Music -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500 mb-4"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
                         <h4 class="text-2xl font-bold text-white mb-2">Live Sets</h4>
                         <p class="text-sm text-neutral-300 font-light">DJ sets mixing global hits with Afrobeats, keeping the dedicated dance floor full on weekends.</p>
                     </div>
-                </div>
+                </article>
                 
-                <div class="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5]">
-                    <img src="1.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80'" alt="Karaoke & Club Night" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
+                <article class="group relative overflow-hidden rounded-sm bg-neutral-950 aspect-[4/5]">
+                    <img src="1.jpg" width="800" height="1000" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80'" alt="Karaoke & Club Night" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-40 transition-all duration-700" />
                     <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent flex flex-col justify-end p-8">
-                        <i data-lucide="calendar" class="text-amber-500 mb-4 w-8 h-8"></i>
+                        <!-- Inline SVG Calendar -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500 mb-4"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
                         <h4 class="text-2xl font-bold text-white mb-2">Weekly Events</h4>
                         <p class="text-sm text-neutral-300 font-light">Join us for Karaoke Thursdays and themed nights. The perfect blend of romantic and lively.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
+        <!-- Menu Section -->
         <section id="menu" class="py-24 relative">
             <div class="absolute inset-0 opacity-10">
-                <img src="7.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80'" alt="Fine Dining Background" class="w-full h-full object-cover grayscale" />
+                <img src="7.jpg" width="1920" height="1080" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80'" alt="Fine Dining Background" class="w-full h-full object-cover grayscale" />
                 <div class="absolute inset-0 bg-neutral-950/90"></div>
             </div>
             
             <div class="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
                 <div class="text-center mb-16">
-                    <i data-lucide="utensils" class="mx-auto text-amber-500 mb-4 w-10 h-10" stroke-width="1"></i>
-                    <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] mb-4">CULINARY EXCELLENCE</h2>
+                    <!-- Inline SVG Utensils -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto text-amber-500 mb-4"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                    <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] mb-4 uppercase">Culinary Excellence</h2>
                     <h3 class="text-4xl font-bold text-white">Menu Highlights</h3>
                 </div>
 
@@ -285,26 +353,28 @@
                 </div>
                 
                 <div class="text-center mt-16">
-                    <button class="text-sm tracking-widest text-amber-500 hover:text-white transition-colors border-b border-amber-500 pb-1" aria-label="Download Full Menu PDF">
+                    <button class="text-sm tracking-widest text-amber-500 hover:text-white transition-colors border-b border-amber-500 pb-1 font-bold" aria-label="Download Full Menu PDF">
                         DOWNLOAD FULL MENU PDF
                     </button>
                 </div>
             </div>
         </section>
 
+        <!-- Gallery Section -->
         <section id="gallery" class="py-2">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-                <img src="4.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80'" alt="Sunset View from Lounge" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
-                <img src="7.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80'" alt="Dining Terrace Area" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
-                <img src="10.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80'" alt="Corporate Gathering at Chillax" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
-                <img src="3.jpg" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=600&q=80'" alt="Daytime Garden Seating" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
+                <img src="4.jpg" width="600" height="600" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80'" alt="Sunset View from Lounge" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
+                <img src="7.jpg" width="600" height="600" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80'" alt="Dining Terrace Area" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
+                <img src="10.jpg" width="600" height="600" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80'" alt="Corporate Gathering at Chillax" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
+                <img src="3.jpg" width="600" height="600" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=600&q=80'" alt="Daytime Garden Seating" class="w-full h-64 md:h-80 object-cover hover:opacity-75 transition-opacity cursor-pointer" />
             </div>
         </section>
 
+        <!-- Contact & Location Section -->
         <section id="contact" class="py-24 bg-neutral-900 border-t border-neutral-800">
             <div class="max-w-7xl mx-auto px-6 md:px-12">
                 <div class="text-center mb-16">
-                    <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] mb-4">GET IN TOUCH</h2>
+                    <h2 class="text-sm text-amber-500 font-bold tracking-[0.3em] mb-4 uppercase">Get In Touch</h2>
                     <h3 class="text-4xl font-bold text-white">Visit Chillax Lounge</h3>
                 </div>
 
@@ -313,7 +383,8 @@
                         <div class="bg-neutral-950 p-8 rounded-sm border border-neutral-800 shadow-xl relative overflow-hidden">
                             <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
                             <div class="flex items-center gap-3 mb-8 border-b border-neutral-800 pb-4">
-                                <i data-lucide="clock" class="text-amber-500 w-7 h-7"></i>
+                                <!-- Inline SVG Clock -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                                 <h4 class="text-2xl font-serif text-white">Operating Hours</h4>
                             </div>
                             <ul class="space-y-5 text-neutral-300">
@@ -334,17 +405,20 @@
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="bg-neutral-950 p-6 rounded-sm border border-neutral-800 flex flex-col justify-center items-center text-center group hover:border-amber-500/50 transition-colors">
-                                <i data-lucide="phone" class="text-amber-500 mb-3 group-hover:scale-110 transition-transform w-6 h-6"></i>
+                                <!-- Inline SVG Phone -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500 mb-3 group-hover:scale-110 transition-transform"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                                 <h5 class="text-white font-bold mb-1">Phone</h5>
                                 <p class="text-neutral-400 text-sm font-light">+250 738 858 888</p>
                             </div>
                             <div class="bg-neutral-950 p-6 rounded-sm border border-neutral-800 flex flex-col justify-center items-center text-center group hover:border-amber-500/50 transition-colors">
-                                <i data-lucide="mail" class="text-amber-500 mb-3 group-hover:scale-110 transition-transform w-6 h-6"></i>
+                                <!-- Inline SVG Mail -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500 mb-3 group-hover:scale-110 transition-transform"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 <h5 class="text-white font-bold mb-1">Email</h5>
                                 <p class="text-neutral-400 text-sm font-light">info@chillaxkigali.com</p>
                             </div>
                             <div class="sm:col-span-2 bg-neutral-950 p-6 rounded-sm border border-neutral-800 flex flex-col justify-center items-center text-center group hover:border-amber-500/50 transition-colors">
-                                <i data-lucide="map-pin" class="text-amber-500 mb-3 group-hover:scale-110 transition-transform w-6 h-6"></i>
+                                <!-- Inline SVG Map Pin -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500 mb-3 group-hover:scale-110 transition-transform"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                                 <h5 class="text-white font-bold mb-1">Location</h5>
                                 <p class="text-neutral-400 text-sm font-light">KG 13 Ave, Nyarutarama, Kigali, Rwanda</p>
                             </div>
@@ -362,7 +436,8 @@
                                 <input type="text" aria-label="Subject" placeholder="Subject (e.g. Reservation Inquiry)" class="bg-neutral-900 border border-neutral-800 text-white px-4 py-3 focus:outline-none focus:border-amber-500 w-full font-light" required />
                                 <textarea aria-label="Your Message" placeholder="Your Message" rows="3" class="bg-neutral-900 border border-neutral-800 text-white px-4 py-3 focus:outline-none focus:border-amber-500 w-full resize-none font-light" required></textarea>
                                 <button type="submit" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold tracking-widest py-4 transition-colors flex items-center justify-center gap-2 mt-2">
-                                    SEND MESSAGE <i data-lucide="send" class="w-4 h-4"></i>
+                                    SEND MESSAGE 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
                                 </button>
                             </div>
                         </form>
@@ -394,10 +469,10 @@
             </div>
             <div class="flex gap-4">
                 <a href="#" aria-label="Visit our Instagram" class="w-10 h-10 rounded-full bg-neutral-900 flex items-center justify-center text-neutral-400 hover:bg-amber-500 hover:text-white transition-colors">
-                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
                 <a href="#" aria-label="Visit our Facebook page" class="w-10 h-10 rounded-full bg-neutral-900 flex items-center justify-center text-neutral-400 hover:bg-amber-500 hover:text-white transition-colors">
-                    <i data-lucide="facebook" class="w-4 h-4"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                 </a>
             </div>
         </div>
@@ -410,9 +485,12 @@
         </div>
     </footer>
 
+    <!-- Minimized & Optimized Script Execution -->
     <script>
+        // Set dynamic year instantly
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
+        // Optimized scroll listener
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -422,13 +500,16 @@
                 navbar.classList.remove('bg-neutral-950/90', 'backdrop-blur-md', 'py-4', 'shadow-2xl');
                 navbar.classList.add('bg-transparent', 'py-6');
             }
-        });
+        }, { passive: true });
 
+        // Mobile Menu Logic with Inline SVGs (No Layout Shifts)
         let isMobileMenuOpen = false;
+        const menuOpenIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>`;
+        const menuCloseIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>`;
 
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
+            const iconContainer = document.getElementById('menu-icon-container');
             const navBtn = document.querySelector('button[aria-controls="mobile-menu"]');
             
             isMobileMenuOpen = !isMobileMenuOpen;
@@ -437,23 +518,11 @@
             if (isMobileMenuOpen) {
                 menu.classList.remove('hidden');
                 menu.classList.add('flex');
-                
-                const newIcon = document.createElement('i');
-                newIcon.id = 'menu-icon';
-                newIcon.setAttribute('data-lucide', 'x');
-                newIcon.className = 'w-7 h-7';
-                icon.parentNode.replaceChild(newIcon, icon);
-                lucide.createIcons();
+                iconContainer.innerHTML = menuCloseIcon;
             } else {
                 menu.classList.add('hidden');
                 menu.classList.remove('flex');
-                
-                const newIcon = document.createElement('i');
-                newIcon.id = 'menu-icon';
-                newIcon.setAttribute('data-lucide', 'menu');
-                newIcon.className = 'w-7 h-7';
-                icon.parentNode.replaceChild(newIcon, icon);
-                lucide.createIcons();
+                iconContainer.innerHTML = menuOpenIcon;
             }
         }
 
@@ -461,18 +530,9 @@
             const element = document.getElementById(id);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
-                if (isMobileMenuOpen) {
-                    toggleMobileMenu();
-                }
+                if (isMobileMenuOpen) toggleMobileMenu();
             }
         }
-
-        // Initialize Lucide Icons after the deferred script loads
-        window.addEventListener('load', () => {
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        });
     </script>
 </body>
 </html>
